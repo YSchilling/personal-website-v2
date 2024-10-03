@@ -15,6 +15,7 @@ watch(() => isDarkMode, () => {
   color: ${isDarkMode ? 'var(--dark-text-color)' : 'var(--text-color)'}`">
     <MyHeader />
     <NuxtPage />
+    <MyFooter class="mt-64" />
   </div>
 </template>
 

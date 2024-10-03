@@ -54,7 +54,7 @@ function activateEffort(element) {
                 </div>
             </div>
         </MySection>
-        <MySection class="mt-96">
+        <MySection class="my-96">
             <div class="flex flex-col items-center">
                 <h2 class="text-2xl font-extrabold mb-4">My current Efforts</h2>
                 <div class="w-16 h-1 bg-black rounded-lg mb-4"></div>
@@ -62,7 +62,7 @@ function activateEffort(element) {
                 <div class="mt-12 flex flex-col md:flex-row gap-8">
                     <img @click="effort1active = true" src="/img/tum_logo.png" width="200px" height="200px"
                         class="effort saturate-0 duration-300 hover:saturate-100 hover:cursor-pointer">
-                    <img @click="effort2active = true" src="/img/visions_logo.svg" width="200px" height="200px"
+                    <img @click="effort2active = true" src="/vector/visions_logo.svg" width="200px" height="200px"
                         class="effort bg-neutral-600 duration-300 hover:bg-black  hover:cursor-pointer px-4">
                     <img @click="effort3active = true" src="/img/ffi_logo.jpg" width="200px" height="200px"
                         class="effort saturate-0 duration-300 hover:saturate-100  hover:cursor-pointer">
@@ -75,11 +75,10 @@ function activateEffort(element) {
                     style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/tum_logo.png'), linear-gradient(#3070b3, #3070b3)">
                     <button @click="effort1active = false" class="text-xl self-end">X</button>
                     <h3 class="text-2xl font-bold mb-2">Technical University of Munich</h3>
-                    <p class="font-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                        sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p class="font-light">I am currenty pursuing a degree in Computer Science at the prestigious
+                        Technical University of Munich (TUM). So far I am very happy with my choice. The TUM has a
+                        strong focus on technology and entrepreneurship, which exactly represents my current interests.
+                        I plan on graduating in 2027.</p>
                     <div class="self-end mt-auto font-medium" style="color: var(--cs-highlight-color)">Computer
                         Science
                     </div>
@@ -114,7 +113,6 @@ function activateEffort(element) {
             </div>
         </MySection>
     </main>
-    <MyFooter class="mt-96" />
 </template>
 
 <style scoped>
