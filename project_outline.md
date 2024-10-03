@@ -114,11 +114,20 @@ Clear Story: Develop a narrative that is easy to remember and clearly communicat
 
 # Content
 
-- tl;dr about me and my experience
+## Homepage
+
+- Hero section - big graphic with a short description of me
+- my mission statement
+- small summary of my experience - link to full story
+- current interests and resulting skills s
+
+## About Page
+
 - my story
   - where it all started (hobby programming)
   - how I got introduced to entrepreneurship
-- what are my current interests/projects/learning topics
+  - what are my future visions
+- contact information
 
 # UX / UI Design
 

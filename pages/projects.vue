@@ -1,0 +1,3 @@
+<template>
+    <MySection></MySection>
+</template>
