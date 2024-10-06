@@ -1,6 +1,25 @@
-<script setup>
+<script setup lang="ts">
+enum SkillType {
+    CS = "Computer Science",
+    ES = "Entrepreneurship",
+}
 
-const skills = ref(["HTML", "CSS", "TailwindCSS", "JavaScript", "Vue.js", "Nuxt.js", "Python", "Git", "Docker", "Linux"]);
+const skills = ref([
+    { title: "HTML", iconURL: "/vector/html_icon.svg", skillType: SkillType.CS },
+    { title: "CSS", iconURL: "/vector/css_icon.svg", skillType: SkillType.CS },
+    { title: "TailwindCSS", iconURL: "/vector/tailwindcss_icon.svg", skillType: SkillType.CS },
+    { title: "JavaScript", iconURL: "/vector/js_icon.svg", skillType: SkillType.CS },
+    { title: "TypeScript", iconURL: "/vector/ts_icon.svg", skillType: SkillType.CS },
+    { title: "Vue.js", iconURL: "/vector/vue_icon.svg", skillType: SkillType.CS },
+    { title: "Nuxt.js", iconURL: "/vector/nuxt_icon.svg", skillType: SkillType.CS },
+    { title: "Wordpress", iconURL: "/vector/wordpress_icon.svg", skillType: SkillType.CS },
+    { title: "Python", iconURL: "/vector/python_icon.svg", skillType: SkillType.CS },
+    { title: "Git", iconURL: "/vector/git_icon.svg", skillType: SkillType.CS },
+    { title: "Docker", iconURL: "/vector/docker_icon.svg", skillType: SkillType.CS },
+    { title: "Linux", iconURL: "/vector/linux_icon.svg", skillType: SkillType.CS },
+    { title: "Design Thinking", skillType: SkillType.ES },
+    { title: "Investing", skillType: SkillType.ES }
+]);
 
 const effort1active = ref(false);
 const effort2active = ref(false);
@@ -39,11 +58,8 @@ const isDarkMode = useState("isDarkMode", () => false);
                 <div>
                     <h2 class="text-2xl font-extrabold mb-4">Skillset Overview</h2>
                     <ul class="flex flex-wrap">
-                        <li v-for="skill in skills" :key="skill" class="mr-4 mb-4 px-4 py-1 rounded-md"
-                            :style="`background-color: ${isDarkMode ? 'var(--dark-accent-color)' : 'var(--accent-color)'}; transition: background-color 300ms`">
-                            {{
-                                skill
-                            }}
+                        <li v-for="(skill, index) in skills" :key="index" class="mr-4 mb-4">
+                            <SkillsetChip :title="skill.title" :iconURL="skill.iconURL" :skillType="skill.skillType" />
                         </li>
                     </ul>
                 </div>
