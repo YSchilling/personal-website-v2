@@ -1,3 +1,9 @@
+<script setup>
+
+const isDarkMode = useState("isDarkMode", () => false);
+
+</script>
+
 <template>
     <footer class="grid grid-cols-3 items-center mx-auto max-w-screen-xl py-6 px-12">
         <div>
@@ -10,10 +16,13 @@
             <NuxtLink to="/contact" class="duration-300 hover:font-extrabold">Contact</NuxtLink>
         </div>
         <div class="justify-self-end flex gap-2">
-            <a href="https://www.linkedin.com/in/yschilling/" target="_blank"><img src="/img/linkedin.png" width="32px"
-                    height="32px"></a>
-            <a href="https://github.com/YSchilling" target="_blank"><img src="/assets/github.png" width="32px"
-                    height="32px"></a>
+            <a href="https://www.linkedin.com/in/yschilling/" target="_blank">
+                <img src="/img/linkedin.png" width="32px" height="32px">
+            </a>
+            <a href="https://github.com/YSchilling" target="_blank">
+                <img :src="isDarkMode ? '/vector/github-mark-white.svg' : '/vector/github-mark.svg'" width="32px"
+                    height="32px">
+            </a>
         </div>
     </footer>
 </template>

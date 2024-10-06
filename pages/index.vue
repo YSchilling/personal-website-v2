@@ -6,14 +6,7 @@ const effort1active = ref(false);
 const effort2active = ref(false);
 const effort3active = ref(false);
 
-function activateEffort(element) {
-    element.style.width = "664px";
-    element.style.height = "374px";
-    element.style["background-color"] = "#183859";
-    element.classList.add("saturate-100");
-    element.querySelector("img").style.filter = "brightness(0.5)";
-    console.log(element.style);
-}
+const isDarkMode = useState("isDarkMode", () => false);
 
 </script>
 
@@ -46,8 +39,10 @@ function activateEffort(element) {
                 <div>
                     <h2 class="text-2xl font-extrabold mb-4">Skillset Overview</h2>
                     <ul class="flex flex-wrap">
-                        <li v-for="skill in skills" :key="skill" class="mr-4 mb-4 bg-gray-200 px-4 py-1 rounded-md">{{
-                            skill
+                        <li v-for="skill in skills" :key="skill" class="mr-4 mb-4 px-4 py-1 rounded-md"
+                            :style="`background-color: ${isDarkMode ? 'var(--dark-accent-color)' : 'var(--accent-color)'}; transition: background-color 300ms`">
+                            {{
+                                skill
                             }}
                         </li>
                     </ul>
