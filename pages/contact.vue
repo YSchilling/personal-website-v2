@@ -1,8 +1,8 @@
 <template>
   <MySection class="h-screen flex flex-col justify-center items-center">
-    <h1 class="text-4xl mb-2">CONTACT</h1>
-    <MyDivider width="128px" />
-    <div class="grid grid-cols-3 grid-rows-2 mt-8 gap-2">
+    <h1 class="text-5xl mb-2">CONTACT</h1>
+    <MyDivider width="172px" class="mb-8" />
+    <div class="grid grid-cols-3 grid-rows-2 gap-2">
       <a href="mailto:contact@yorickschilling.com"
         class="col-span-2 border rounded-md p-4 flex items-center duration-300 hover:scale-105">
         <img src="/img/mail.png" width="36px" height="36px" class="mr-2">

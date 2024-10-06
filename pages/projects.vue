@@ -53,14 +53,14 @@ const pastProjects = [
 </script>
 
 <template>
-    <MySection class="flex flex-col justify-center items-center h-screen">
-        <h1 class="">PROJECTS</h1>
-        <MyDivider width="256px" />
-        <p class="text-xl mt-4 text-center">Below is a list of my most important projects, efforts or interests. Doesn't
+    <MySection class="flex flex-col items-center pt-48">
+        <h1 class="text-5xl mb-2">PROJECTS</h1>
+        <MyDivider width="200px" class="mb-6" />
+        <p class="text-xl text-center">Below is a list of my most important projects, efforts or interests. Doesn't
             matter
             what you call it. <br> It is the stuff I did, do and love :)</p>
     </MySection>
-    <MySection>
+    <MySection class="mt-48">
         <h2 class="text-2xl font-extrabold mb-1">My current Efforts</h2>
         <div class="mb-4 self-center"
             :style="`background-color: ${isDarkMode ? 'var(--dark-text-color)' : 'var(--text-color)'}; height: 1px`">
@@ -78,8 +78,4 @@ const pastProjects = [
     </MySection>
 </template>
 
-<style scoped>
-h1 {
-    font-size: 64px;
-}
-</style>
+<style scoped></style>
