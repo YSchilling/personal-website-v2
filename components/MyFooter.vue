@@ -10,8 +10,8 @@
             <NuxtLink to="/contact" class="duration-300 hover:font-extrabold">Contact</NuxtLink>
         </div>
         <div class="justify-self-end flex gap-2">
-            <a href="https://www.linkedin.com/in/yschilling/" target="_blank"><img src="/assets/linkedin.png"
-                    width="32px" height="32px"></a>
+            <a href="https://www.linkedin.com/in/yschilling/" target="_blank"><img src="/img/linkedin.png" width="32px"
+                    height="32px"></a>
             <a href="https://github.com/YSchilling" target="_blank"><img src="/assets/github.png" width="32px"
                     height="32px"></a>
         </div>

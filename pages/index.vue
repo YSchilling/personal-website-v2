@@ -57,7 +57,7 @@ function activateEffort(element) {
         <MySection class="my-96">
             <div class="flex flex-col items-center">
                 <h2 class="text-2xl font-extrabold mb-4">My current Efforts</h2>
-                <div class="w-16 h-1 bg-black rounded-lg mb-4"></div>
+                <MyDivider width="128px" class="mb-4" />
                 <p class="text-xl">These things keep me the most occupied at the moment</p>
                 <div class="mt-12 flex flex-col md:flex-row gap-8">
                     <img @click="effort1active = true" src="/img/tum_logo.png" width="200px" height="200px"

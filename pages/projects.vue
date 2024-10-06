@@ -54,8 +54,8 @@ const pastProjects = [
 
 <template>
     <MySection class="flex flex-col justify-center items-center h-screen">
-        <h1>PROJECTS</h1>
-        <div style="background-color: black; height: 2px; width: 258px"></div>
+        <h1 class="">PROJECTS</h1>
+        <MyDivider width="256px" />
         <p class="text-xl mt-4 text-center">Below is a list of my most important projects, efforts or interests. Doesn't
             matter
             what you call it. <br> It is the stuff I did, do and love :)</p>
