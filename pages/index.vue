@@ -83,11 +83,11 @@ const isDarkMode = useState("isDarkMode", () => false);
                     style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/visions_logo.png'), linear-gradient(#000000, #000000)">
                     <button @click="effort2active = false" class="text-xl self-end">X</button>
                     <h3 class="text-2xl font-bold mb-2">Visions Development</h3>
-                    <p class="font-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                        sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p class="font-light">Visions Development is a web agency I founded with a good friend of mine. It
+                        kinda happened naturally. Some people in my circle asked me, if I could build a website for them
+                        and after 1-2 projects I told a friend about it and since my expertise is more on the technical
+                        side and his more on the design side, we decided to team up and founded Visions Development. We
+                        are eager to grow and learn, while working hard to build great experiences.</p>
                     <div class="self-end mt-auto font-medium"><span style="color: var(--cs-highlight-color)">Computer
                             Science</span> &nbsp;&&nbsp; <span
                             style="color: var(--es-highlight-color)">Entrepreneurship</span></div>
@@ -97,11 +97,10 @@ const isDarkMode = useState("isDarkMode", () => false);
                     style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ffi_logo.jpg'), linear-gradient(90deg, #fe7446, #fe7446 25%, #f74162 75%, #f74162)">
                     <button @click="effort3active = false" class="text-xl self-end">X</button>
                     <h3 class="text-2xl font-bold mb-2">Future Founders Initiative</h3>
-                    <p class="font-light">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                        sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p class="font-light">The Future Founders Initiative is a non-profit organization whichs mission is
+                        to inspire and educate young people to become entrepreneurs. I was part of the founding process
+                        in 2024 and since them I am responsible for the technical side of things. For example I built
+                        the website and the backend for the FFI platform.</p>
                     <div class="self-end mt-auto font-medium" style="color: var(--es-highlight-color)">Entrepreneurship
                     </div>
                 </div>
