@@ -55,7 +55,7 @@ const pastProjects = [
 <template>
     <MySection class="flex flex-col items-center pt-48">
         <div class="flex flex-col items-center">
-            <h1 class="text-5xl mb-2">PROJECTS</h1>
+            <h1>PROJECTS</h1>
             <MyDivider width="80%" class="mb-6" />
         </div>
         <p class="text-lg md:text-xl text-center">Below is a list of my most important projects, efforts or interests.
@@ -81,4 +81,8 @@ const pastProjects = [
     </MySection>
 </template>
 
-<style scoped></style>
+<style scoped>
+h1 {
+    font-size: clamp(32px, 6vw, 48px);
+}
+</style>

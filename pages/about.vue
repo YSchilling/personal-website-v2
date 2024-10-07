@@ -1,7 +1,7 @@
 <template>
   <MySection class="pt-48 flex flex-col items-center">
     <div class="flex flex-col items-center">
-      <h1 class="text-5xl mb-2">MY STORY</h1>
+      <h1>MY STORY</h1>
       <MyDivider width="80%" class="mb-6" />
     </div>
     <p>My journey into tech started in high school with a Udemy course on Python. I remember sitting at my grandma's
