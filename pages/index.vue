@@ -1,6 +1,25 @@
-<script setup>
+<script setup lang="ts">
+enum SkillType {
+    CS = "Computer Science",
+    ES = "Entrepreneurship",
+}
 
-const skills = ref(["HTML", "CSS", "TailwindCSS", "JavaScript", "Vue.js", "Nuxt.js", "Python", "Git", "Docker", "Linux"]);
+const skills = ref([
+    { title: "HTML", iconURL: "/vector/html_icon.svg", skillType: SkillType.CS },
+    { title: "CSS", iconURL: "/vector/css_icon.svg", skillType: SkillType.CS },
+    { title: "TailwindCSS", iconURL: "/vector/tailwindcss_icon.svg", skillType: SkillType.CS },
+    { title: "JavaScript", iconURL: "/vector/js_icon.svg", skillType: SkillType.CS },
+    { title: "TypeScript", iconURL: "/vector/ts_icon.svg", skillType: SkillType.CS },
+    { title: "Vue.js", iconURL: "/vector/vue_icon.svg", skillType: SkillType.CS },
+    { title: "Nuxt.js", iconURL: "/vector/nuxt_icon.svg", skillType: SkillType.CS },
+    { title: "Wordpress", iconURL: "/vector/wordpress_icon.svg", skillType: SkillType.CS },
+    { title: "Python", iconURL: "/vector/python_icon.svg", skillType: SkillType.CS },
+    { title: "Git", iconURL: "/vector/git_icon.svg", skillType: SkillType.CS },
+    { title: "Docker", iconURL: "/vector/docker_icon.svg", skillType: SkillType.CS },
+    { title: "Linux", iconURL: "/vector/linux_icon.svg", skillType: SkillType.CS },
+    { title: "Design Thinking", skillType: SkillType.ES },
+    { title: "Investing", skillType: SkillType.ES }
+]);
 
 const effort1active = ref(false);
 const effort2active = ref(false);
@@ -13,12 +32,12 @@ const isDarkMode = useState("isDarkMode", () => false);
 <template>
     <main>
         <MySection class="flex flex-col justify-center items-center h-screen">
-            <h1>HEY, I'M YORICK SCHILLING</h1>
-            <p class="text-xl text-center">I am exploring the fields of <span
+            <h1 class="text-center">HEY, I'M YORICK SCHILLING</h1>
+            <p class="subtitle text-center">I am exploring the fields of <span
                     style="color: var(--cs-highlight-color)">Computer Science</span> and <span
                     style="color: var(--es-highlight-color)">Entrepreneurship</span> to
-                develop innovative products <br> that
-                positively impact society, all while embracing <br>growth and continuous learning.</p>
+                develop innovative products that positively impact society, all while embracing growth and continuous
+                learning.</p>
         </MySection>
         <MySection class="mt-32">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -39,11 +58,8 @@ const isDarkMode = useState("isDarkMode", () => false);
                 <div>
                     <h2 class="text-2xl font-extrabold mb-4">Skillset Overview</h2>
                     <ul class="flex flex-wrap">
-                        <li v-for="skill in skills" :key="skill" class="mr-4 mb-4 px-4 py-1 rounded-md"
-                            :style="`background-color: ${isDarkMode ? 'var(--dark-accent-color)' : 'var(--accent-color)'}; transition: background-color 300ms`">
-                            {{
-                                skill
-                            }}
+                        <li v-for="(skill, index) in skills" :key="index" class="mr-4 mb-4">
+                            <SkillsetChip :title="skill.title" :iconURL="skill.iconURL" :skillType="skill.skillType" />
                         </li>
                     </ul>
                 </div>
@@ -53,7 +69,7 @@ const isDarkMode = useState("isDarkMode", () => false);
             <div class="flex flex-col items-center">
                 <h2 class="text-2xl font-extrabold mb-4">My current Efforts</h2>
                 <MyDivider width="128px" class="mb-4" />
-                <p class="text-xl">These things keep me the most occupied at the moment</p>
+                <p class="text-lg md:text-xl text-center">These things keep me the most occupied at the moment</p>
                 <div class="mt-12 flex flex-col md:flex-row gap-8">
                     <img @click="effort1active = true" src="/img/tum_logo.png" width="200px" height="200px"
                         class="effort saturate-0 duration-300 hover:saturate-100 hover:cursor-pointer">
@@ -111,7 +127,11 @@ const isDarkMode = useState("isDarkMode", () => false);
 
 <style scoped>
 h1 {
-    font-size: 64px;
+    font-size: clamp(36px, 6vw, 64px);
+}
+
+.subtitle {
+    font-size: clamp(18px, 2vw, 24px);
 }
 
 .effort {
@@ -120,11 +140,18 @@ h1 {
 }
 
 .expanded_effort {
-    width: 664px;
-    height: 374px;
+    width: 90%;
+    height: 60%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 768px) {
+    .expanded_effort {
+        width: 664px;
+        height: 374px;
+    }
 }
 </style>

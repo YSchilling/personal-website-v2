@@ -1,6 +1,6 @@
 <script setup>
 
-const isEnglish = useState("isEnglish", () => false);
+//const isEnglish = useState("isEnglish", () => false);
 const isDarkMode = useState("isDarkMode", () => false);
 
 </script>
@@ -15,14 +15,15 @@ const isDarkMode = useState("isDarkMode", () => false);
                 <NuxtLink to="/contact" class="text-xl duration-300 hover:font-extrabold">Contact</NuxtLink>
             </nav>
             <div class="text-2xl mx-4">|</div>
-            <div class="flex">
+            <!-- TODO implement DE EN switch 
+            <div class="flex mr-3">
                 <button @click="isEnglish = false" :class="isEnglish ? '' : 'font-extrabold'"
                     class="duration-300 hover:font-extrabold">DE</button>
                 <div class="text-xl mx-1">/</div>
                 <button @click="isEnglish = true" :class="isEnglish ? 'font-extrabold' : ''"
                     class="duration-300 hover:font-extrabold">EN</button>
-            </div>
-            <div class="flex ml-3">
+            </div>-->
+            <div class="flex">
                 <button @click="isDarkMode = false" :class="isDarkMode ? '' : 'font-extrabold'"
                     class="duration-300 hover:font-extrabold">Light</button>
                 <div class="text-xl mx-1">/</div>
