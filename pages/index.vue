@@ -32,12 +32,12 @@ const isDarkMode = useState("isDarkMode", () => false);
 <template>
     <main>
         <MySection class="flex flex-col justify-center items-center h-screen">
-            <h1>HEY, I'M YORICK SCHILLING</h1>
-            <p class="text-xl text-center">I am exploring the fields of <span
+            <h1 class="text-center">HEY, I'M YORICK SCHILLING</h1>
+            <p class="subtitle text-center">I am exploring the fields of <span
                     style="color: var(--cs-highlight-color)">Computer Science</span> and <span
                     style="color: var(--es-highlight-color)">Entrepreneurship</span> to
-                develop innovative products <br> that
-                positively impact society, all while embracing <br>growth and continuous learning.</p>
+                develop innovative products that positively impact society, all while embracing growth and continuous
+                learning.</p>
         </MySection>
         <MySection class="mt-32">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -69,7 +69,7 @@ const isDarkMode = useState("isDarkMode", () => false);
             <div class="flex flex-col items-center">
                 <h2 class="text-2xl font-extrabold mb-4">My current Efforts</h2>
                 <MyDivider width="128px" class="mb-4" />
-                <p class="text-xl">These things keep me the most occupied at the moment</p>
+                <p class="text-lg md:text-xl text-center">These things keep me the most occupied at the moment</p>
                 <div class="mt-12 flex flex-col md:flex-row gap-8">
                     <img @click="effort1active = true" src="/img/tum_logo.png" width="200px" height="200px"
                         class="effort saturate-0 duration-300 hover:saturate-100 hover:cursor-pointer">
@@ -127,7 +127,11 @@ const isDarkMode = useState("isDarkMode", () => false);
 
 <style scoped>
 h1 {
-    font-size: 64px;
+    font-size: clamp(36px, 6vw, 64px);
+}
+
+.subtitle {
+    font-size: clamp(18px, 2vw, 24px);
 }
 
 .effort {
@@ -136,11 +140,18 @@ h1 {
 }
 
 .expanded_effort {
-    width: 664px;
-    height: 374px;
+    width: 90%;
+    height: 60%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 768px) {
+    .expanded_effort {
+        width: 664px;
+        height: 374px;
+    }
 }
 </style>
