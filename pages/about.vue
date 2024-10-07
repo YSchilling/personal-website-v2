@@ -1,7 +1,9 @@
 <template>
   <MySection class="pt-48 flex flex-col items-center">
-    <h1 class="text-5xl mb-2">MY STORY</h1>
-    <MyDivider width="172px" class="mb-6" />
+    <div class="flex flex-col items-center">
+      <h1 class="text-5xl mb-2">MY STORY</h1>
+      <MyDivider width="80%" class="mb-6" />
+    </div>
     <p>My journey into tech started in high school with a Udemy course on Python. I remember sitting at my grandma's
       house on vacation, sneaking away at night to dive into the lessons while everyone else was asleep. That was when I
       discovered the exciting world of computer science. I explored many topics out of pure curiosity, even if I didn’t
@@ -36,8 +38,20 @@
 </template>
 
 <style scoped>
+h1 {
+  font-size: clamp(32px, 6vw, 48px);
+}
+
+
 p {
-  margin: 0px 10% 16px 10%;
+  margin: 0 0 16px 0;
   align-self: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  p {
+    margin: 0 10% 16px 10%;
+  }
+
 }
 </style>
