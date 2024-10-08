@@ -7,7 +7,7 @@ const isDarkMode = useState("isDarkMode", () => false);
 
 <template>
     <header class="fixed w-full z-30" style="backdrop-filter: blur(2px);">
-        <div class="h-16 flex items-center mx-auto max-w-screen-xl px-12">
+        <div class="h-16 flex items-center mx-auto max-w-screen-xl px-6 md:px-8 lg:px-12">
             <NuxtLink to="/" class="mr-auto text-xl font-semibold">Yorick Schilling</NuxtLink>
             <MobileMenu />
             <nav class="hidden md:flex">

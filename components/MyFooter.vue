@@ -5,7 +5,8 @@ const isDarkMode = useState("isDarkMode", () => false);
 </script>
 
 <template>
-    <footer class="grid grid-col-1 md:grid-cols-3 justify-items-center mx-auto max-w-screen-xl py-6 px-12">
+    <footer
+        class="grid grid-col-1 md:grid-cols-3 justify-items-center mx-auto max-w-screen-xl py-6 px-6 md:px-8 lg:px-12">
         <div class="flex flex-col row-start-3 md:row-start-1">
             <h1 class="text-2xl font-bold self-center md:self-start">Yorick Schilling</h1>
             <p class="text-sm">© 2024 Yorick Schilling. All rights reserved.</p>
