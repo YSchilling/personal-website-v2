@@ -1,54 +1,9 @@
-<script setup>
+<script setup lang="ts">
 
 const isDarkMode = useState("isDarkMode", () => false);
 
-const currentEfforts = [
-    {
-        title: "Technical University of Munich",
-        description: "I am currenty pursuing a degree in Computer Science at the prestigious Technical University of Munich (TUM). So far I am very happy with my choice. The TUM has a strong focus on technology and entrepreneurship, which exactly represents my current interests. I plan on graduating in 2027.",
-        imageURL: "/img/tum_logo.png",
-        duration: "2024 - present",
-        websiteURL: "https://tum.de"
-    },
-    {
-        title: "Visions Development",
-        description: "Visions Development is a web agency I founded with a good friend of mine. It kinda happened naturally. Some people in my circle asked me, if I could build a website for them and after 1-2 projects I told a friend about it and since my expertise is more on the technical side and his more on the design side, we decided to team up and founded Visions Development. We are eager to grow and learn, while working hard to build great experiences.",
-        imageURL: "/img/visions_logo.png",
-        duration: "2024 - present",
-        websiteURL: "https://visions-dev.com"
-    },
-    {
-        title: "Future Founders Initiative",
-        description: "The Future Founders Initiative is a non-profit organization whichs mission is to inspire and educate young people to become entrepreneurs. I was part of the founding process in 2024 and since them I am responsible for the technical side of things. For example I built the website and the backend for the FFI platform.",
-        imageURL: "/img/ffi_logo.jpg",
-        duration: "2024 - present",
-        websiteURL: "https://ffievents.com"
-    },
-    {
-        title: "My Home Lab Endeavour",
-        description: "Some time ago I kinda had a privacy nerd phase, where I was obsessed to leak as little data as possible. Thats where I discovered the concept of self hosting. I started with the typicall Raspberry PI setup, which I used as a NAS and backup system. Some months ago I found a pretty good deal and bought myself a HP EliteDesk 800 G4 with a Intel i7 8700 in it. Now I run multiple services on it and I am learning about Networking, Docker, Linux and all that good stuff.",
-        imageURL: "/img/homelab.jpeg",
-        duration: "2022 - present",
-        websiteURL: "https://ffievents.com"
-    },
-]
-
-const pastProjects = [
-    {
-        title: "Creative Coding Explorer",
-        description: "Creative Coding is a process, based on exploration, iteration, reflection and discovery, where code is used as the primary medium to create a wide range of media artifacts. I am currently working on a platform, where people can explore creative coding projects and learn from them. The platform is still in development and only contains my work at the moment.",
-        imageURL: "/img/creative_coding_explorer.png",
-        duration: "2023",
-        websiteURL: "https://yorickschilling.com/creativecoding"
-    },
-    {
-        title: "Snakepy",
-        description: "Ah this is by far my most beloved project. It represents the early stages of my journey, where I mainly used Python to create simple games and scripts. Snakepy is a simple snake game written in Python. The game is open source and can be found on my GitHub profile.",
-        imageURL: "/img/snakepy.png",
-        duration: "2021",
-        websiteURL: "https://github.com/YSchilling/snakepy"
-    }
-]
+const { data } = await useAsyncData('projects', () => queryContent('/projects').findOne())
+const { currentEfforts, pastProjects } = data.value!;
 
 </script>
 

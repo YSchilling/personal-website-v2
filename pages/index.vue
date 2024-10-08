@@ -2,27 +2,8 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-enum SkillType {
-    CS = "Computer Science",
-    ES = "Entrepreneurship",
-}
-
-const skills = ref([
-    { title: "HTML", iconURL: "/vector/html_icon.svg", skillType: SkillType.CS },
-    { title: "CSS", iconURL: "/vector/css_icon.svg", skillType: SkillType.CS },
-    { title: "TailwindCSS", iconURL: "/vector/tailwindcss_icon.svg", skillType: SkillType.CS },
-    { title: "JavaScript", iconURL: "/vector/js_icon.svg", skillType: SkillType.CS },
-    { title: "TypeScript", iconURL: "/vector/ts_icon.svg", skillType: SkillType.CS },
-    { title: "Vue.js", iconURL: "/vector/vue_icon.svg", skillType: SkillType.CS },
-    { title: "Nuxt.js", iconURL: "/vector/nuxt_icon.svg", skillType: SkillType.CS },
-    { title: "Wordpress", iconURL: "/vector/wordpress_icon.svg", skillType: SkillType.CS },
-    { title: "Python", iconURL: "/vector/python_icon.svg", skillType: SkillType.CS },
-    { title: "Git", iconURL: "/vector/git_icon.svg", skillType: SkillType.CS },
-    { title: "Docker", iconURL: "/vector/docker_icon.svg", skillType: SkillType.CS },
-    { title: "Linux", iconURL: "/vector/linux_icon.svg", skillType: SkillType.CS },
-    { title: "Design Thinking", skillType: SkillType.ES },
-    { title: "Investing", skillType: SkillType.ES }
-]);
+const { data } = await useAsyncData('skills', () => queryContent('/skills').findOne())
+const skills = data.value!.value;
 
 const effort1active = ref(false);
 const effort2active = ref(false);

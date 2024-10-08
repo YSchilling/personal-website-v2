@@ -1,20 +1,12 @@
 <script setup lang="ts">
-enum SkillType {
-    CS = "Computer Science",
-    ES = "Entrepreneurship",
-}
-
 const props = defineProps({
     title: String,
     iconURL: String,
-    skillType: {
-        type: String as PropType<SkillType>,
-        required: true
-    }
+    skillType: String
 });
 
-const backgroundColor = computed(() => props.skillType === SkillType.CS ? 'rgba(36, 200, 219, 0.1)' : 'rgba(255, 193, 49, 0.1)');
-const borderColor = computed(() => props.skillType === SkillType.CS ? 'var(--cs-highlight-color)' : 'var(--es-highlight-color)');
+const backgroundColor = computed(() => props.skillType == "CS" ? 'rgba(36, 200, 219, 0.1)' : 'rgba(255, 193, 49, 0.1)');
+const borderColor = computed(() => props.skillType == "CS" ? 'var(--cs-highlight-color)' : 'var(--es-highlight-color)');
 
 </script>
 
