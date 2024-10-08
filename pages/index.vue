@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 enum SkillType {
     CS = "Computer Science",
     ES = "Entrepreneurship",
@@ -25,13 +28,54 @@ const effort1active = ref(false);
 const effort2active = ref(false);
 const effort3active = ref(false);
 
-const isDarkMode = useState("isDarkMode", () => false);
+let gsapContext: gsap.Context;
+
+onMounted(() => {
+    gsapContext = gsap.context(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to("#hero-section", {
+            scrollTrigger: {
+                trigger: "#hero-section",
+            },
+            duration: 1,
+            opacity: 1,
+        });
+        gsap.to("#intro-div", {
+            scrollTrigger: {
+                trigger: "#intro-div",
+            },
+            duration: 1,
+            delay: 0.5,
+            opacity: 1,
+        });
+        gsap.to("#skills-div", {
+            scrollTrigger: {
+                trigger: "#skills-div",
+            },
+            duration: 1,
+            delay: 0.5,
+            opacity: 1,
+        });
+        gsap.to("#efforts-section", {
+            scrollTrigger: {
+                trigger: "#efforts-section",
+            },
+            duration: 1,
+            delay: 0.5,
+            opacity: 1,
+        })
+    });
+});
+
+onUnmounted(() => {
+    gsapContext.revert();
+});
 
 </script>
 
 <template>
     <main>
-        <MySection class="flex flex-col justify-center items-center h-screen">
+        <MySection id="hero-section" class="mb-32 opacity-0 flex flex-col justify-center items-center h-screen">
             <h1 class="text-center">HEY, I'M YORICK SCHILLING</h1>
             <p class="subtitle text-center">I am exploring the fields of <span
                     style="color: var(--cs-highlight-color)">Computer Science</span> and <span
@@ -39,9 +83,9 @@ const isDarkMode = useState("isDarkMode", () => false);
                 develop innovative products that positively impact society, all while embracing growth and continuous
                 learning.</p>
         </MySection>
-        <MySection class="mt-32">
+        <MySection id="about-section" class="mb-64">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-64 lg:gap-16">
-                <div>
+                <div id="intro-div" class="opacity-0">
                     <h2 class="text-2xl font-extrabold mb-4">Short Introduction</h2>
                     <p>With a lifelong passion for technology, I have immersed myself in the world of computers and
                         programming. What began as a hobby five years ago has become a professional journey, where I’ve
@@ -55,7 +99,7 @@ const isDarkMode = useState("isDarkMode", () => false);
                         horizons both personally and professionally.
                     </p>
                 </div>
-                <div>
+                <div id="skills-div" class="opacity-0">
                     <h2 class="text-2xl font-extrabold mb-4">Skillset Overview</h2>
                     <ul class="flex flex-wrap">
                         <li v-for="(skill, index) in skills" :key="index" class="mr-4 mb-4">
@@ -65,7 +109,7 @@ const isDarkMode = useState("isDarkMode", () => false);
                 </div>
             </div>
         </MySection>
-        <MySection class="my-64">
+        <MySection id="efforts-section" class="mb-64 opacity-0">
             <div class="flex flex-col items-center">
                 <h2 class="text-2xl font-extrabold mb-4">My current Efforts</h2>
                 <MyDivider width="128px" class="mb-4" />
