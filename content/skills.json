@@ -1,0 +1,19 @@
+{
+  "value": [
+    { "title": "HTML", "iconURL": "/vector/html_icon.svg", "skillType": "CS" },
+    { "title": "CSS", "iconURL": "/vector/css_icon.svg", "skillType": "CS" },
+    { "title": "TailwindCSS", "iconURL": "/vector/tailwindcss_icon.svg", "skillType": "CS" },
+    { "title": "JavaScript", "iconURL": "/vector/js_icon.svg", "skillType": "CS" },
+    { "title": "TypeScript", "iconURL": "/vector/ts_icon.svg", "skillType": "CS" },
+    { "title": "Vue.js", "iconURL": "/vector/vue_icon.svg", "skillType": "CS" },
+    { "title": "Nuxt.js", "iconURL": "/vector/nuxt_icon.svg", "skillType": "CS" },
+    { "title": "Wordpress", "iconURL": "/vector/wordpress_icon.svg", "skillType": "CS" },
+    { "title": "Python", "iconURL": "/vector/python_icon.svg", "skillType": "CS" },
+    { "title": "Go", "iconURL": "/vector/go_icon.svg", "skillType": "CS" },
+    { "title": "Git", "iconURL": "/vector/git_icon.svg", "skillType": "CS" },
+    { "title": "Docker", "iconURL": "/vector/docker_icon.svg", "skillType": "CS" },
+    { "title": "Linux", "iconURL": "/vector/linux_icon.svg", "skillType": "CS" },
+    { "title": "Design Thinking", "skillType": "ES" },
+    { "title": "Investing", "skillType": "ES" }
+  ]
+}
