@@ -40,7 +40,7 @@ const isDarkMode = useState("isDarkMode", () => false);
                 learning.</p>
         </MySection>
         <MySection class="mt-32">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-64 lg:gap-16">
                 <div>
                     <h2 class="text-2xl font-extrabold mb-4">Short Introduction</h2>
                     <p>With a lifelong passion for technology, I have immersed myself in the world of computers and
@@ -65,7 +65,7 @@ const isDarkMode = useState("isDarkMode", () => false);
                 </div>
             </div>
         </MySection>
-        <MySection class="my-96">
+        <MySection class="my-64">
             <div class="flex flex-col items-center">
                 <h2 class="text-2xl font-extrabold mb-4">My current Efforts</h2>
                 <MyDivider width="128px" class="mb-4" />
