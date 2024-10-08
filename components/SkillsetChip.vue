@@ -13,22 +13,15 @@ const props = defineProps({
     }
 });
 
-const isDarkMode = useState("isDarkMode", () => false);
-const backgroundColor = computed(() => isDarkMode.value ? 'var(--dark-accent-color)' : 'var(--accent-color)');
+const backgroundColor = computed(() => props.skillType === SkillType.CS ? 'rgba(36, 200, 219, 0.1)' : 'rgba(255, 193, 49, 0.1)');
 const borderColor = computed(() => props.skillType === SkillType.CS ? 'var(--cs-highlight-color)' : 'var(--es-highlight-color)');
 
 </script>
 
 <template>
-    <div class="chip px-4 py-1 rounded-md flex items-center"
-        :style="`background-color: transparent; transition: background-color 300ms; border: solid 1px ${borderColor}`">
+    <div class="px-4 py-1 rounded-md flex items-center"
+        :style="`background-color: ${backgroundColor}; transition: background-color 300ms; border: solid 1px ${borderColor}`">
         <img v-if="props.iconURL" :src="iconURL" alt="icon" class="mr-2" style="height: 1.3em">
         <div>{{ title }}</div>
     </div>
 </template>
-
-<style scoped>
-.chip {
-    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.4);
-}
-</style>

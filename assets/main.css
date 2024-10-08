@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 :root {
-  --bg-color: #f9f9f9;
+  --bg-color: #ffffff;
   --dark-bg-color: #181818;
-  --text-color: #333333;
-  --dark-text-color: #f9f9f9;
+  --text-color: #17181c;
+  --dark-text-color: #ffffff;
   --accent-color: #f3f4f6;
   --dark-accent-color: #222222;
-  --cs-highlight-color: #ae00ff;
-  --es-highlight-color: #ffe100;
+  --cs-highlight-color: #24c8db;
+  --es-highlight-color: #ffc131;
 }
 
 body {
