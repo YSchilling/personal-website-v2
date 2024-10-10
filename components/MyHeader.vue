@@ -8,7 +8,10 @@ const isDarkMode = useState("isDarkMode", () => false);
 <template>
     <header class="fixed w-full z-30" style="backdrop-filter: blur(2px);">
         <div class="h-16 flex items-center mx-auto max-w-screen-xl px-6 md:px-8 lg:px-12">
-            <NuxtLink to="/" class="mr-auto text-xl font-semibold">Yorick Schilling</NuxtLink>
+            <NuxtLink to="/" class="flex mr-auto text-xl font-semibold">
+                <img width="28" src="/favicon.svg" class="mr-2">
+                Yorick Schilling
+            </NuxtLink>
             <MobileMenu />
             <nav class="hidden md:flex">
                 <NuxtLink to="/about" class="mr-4 text-xl duration-300 hover:font-extrabold">About</NuxtLink>

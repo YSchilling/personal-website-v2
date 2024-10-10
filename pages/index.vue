@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger, TextPlugin } from 'gsap/all';
 
 const { data } = await useAsyncData('skills', () => queryContent('/skills').findOne())
 const skills = data.value!.value;
@@ -13,14 +13,29 @@ let gsapContext: gsap.Context;
 
 onMounted(() => {
     gsapContext = gsap.context(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.to("#hero-section", {
-            scrollTrigger: {
-                trigger: "#hero-section",
+        gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+        const heroTimeline = gsap.timeline()
+        heroTimeline.to("#hero-title-hey", {
+            text: {
+                value: "Hey!",
+                speed: 0.5
+            }
+        })
+        heroTimeline.to("#hero-title-rest", {
+            delay: 1,
+            text: {
+                value: " I am Yorick Schilling",
+                speed: 0.5
+
             },
-            duration: 1,
+        })
+        heroTimeline.to("#hero-subtitle", {
+            delay: 1,
             opacity: 1,
-        });
+            y: 0,
+            duration: 1
+        })
         gsap.to("#intro-div", {
             scrollTrigger: {
                 trigger: "#intro-div",
@@ -56,13 +71,13 @@ onUnmounted(() => {
 
 <template>
     <main>
-        <MySection id="hero-section" class="mb-32 opacity-0 flex flex-col justify-center items-center h-screen">
-            <h1 class="text-center">HEY, I'M YORICK SCHILLING</h1>
-            <p class="subtitle text-center">I am exploring the fields of <span
-                    style="color: var(--cs-highlight-color)">Computer Science</span> and <span
-                    style="color: var(--es-highlight-color)">Entrepreneurship</span> to
-                develop innovative products that positively impact society, all while embracing growth and continuous
-                learning.</p>
+        <MySection id="hero-section" class="mb-32 flex flex-col justify-center items-center h-screen">
+            <h1 class="text-center"><span id="hero-title-hey"></span><span id="hero-title-rest"></span></h1>
+            <p id="hero-subtitle" class="opacity-0 translate-y-4 subtitle text-center">I am exploring the fields of
+                <span style='color: var(--cs-highlight-color)'>Computer Science</span> and <span
+                    style='color: var(--es-highlight-color)'>Entrepreneurship</span> to develop innovative products that
+                positively impact society, all while embracing growth and continuous learning.
+            </p>
         </MySection>
         <MySection id="about-section" class="mb-64">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-64 lg:gap-16">
