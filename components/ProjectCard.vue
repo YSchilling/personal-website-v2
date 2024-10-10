@@ -4,7 +4,7 @@ const props = defineProps({
     title: String,
     description: String,
     imageURL: String,
-    duration: Stringr,
+    duration: String,
     websiteURL: String,
 });
 
