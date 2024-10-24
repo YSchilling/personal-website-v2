@@ -123,50 +123,53 @@ useHead({ title: null })
                     <img @click="effort3active = true" src="/img/ffi_logo.jpg" width="200px" height="200px"
                         class="effort saturate-0 duration-300 hover:saturate-100  hover:cursor-pointer">
                 </div>
-                <div v-show="effort1active || effort2active || effort3active"
-                    class="fixed top-0 left-0 w-screen h-screen z-10" style="background-color: rgba(0,0,0,0.5)"></div>
-                <!-- expanded efforts -->
-                <div v-show="effort1active"
-                    class="expanded_effort text-white flex flex-col p-6 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/tum_logo.png'), linear-gradient(#3070b3, #3070b3)">
-                    <button @click="effort1active = false" class="text-xl self-end">X</button>
-                    <h3 class="text-2xl font-bold mb-2">Technical University of Munich</h3>
-                    <p class="font-light">I am currenty pursuing a degree in Computer Science at the prestigious
-                        Technical University of Munich (TUM). So far I am very happy with my choice. The TUM has a
-                        strong focus on technology and entrepreneurship, which exactly represents my current interests.
-                        I plan on graduating in 2027.</p>
-                    <div class="self-end mt-auto font-medium" style="color: var(--cs-highlight-color)">Computer
-                        Science
-                    </div>
-                </div>
-                <div v-show="effort2active"
-                    class="expanded_effort text-white flex flex-col p-6 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/visions_logo.png'), linear-gradient(#000000, #000000)">
-                    <button @click="effort2active = false" class="text-xl self-end">X</button>
-                    <h3 class="text-2xl font-bold mb-2">Visions Development</h3>
-                    <p class="font-light">Visions Development is a web agency I founded with a good friend of mine. It
-                        kinda happened naturally. Some people in my circle asked me, if I could build a website for them
-                        and after 1-2 projects I told a friend about it and since my expertise is more on the technical
-                        side and his more on the design side, we decided to team up and founded Visions Development. We
-                        are eager to grow and learn, while working hard to build great experiences.</p>
-                    <div class="self-end mt-auto font-medium"><span style="color: var(--cs-highlight-color)">Computer
-                            Science</span> &nbsp;&&nbsp; <span
-                            style="color: var(--es-highlight-color)">Entrepreneurship</span></div>
-                </div>
-                <div v-show="effort3active"
-                    class="expanded_effort text-white flex flex-col p-6 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ffi_logo.jpg'), linear-gradient(90deg, #fe7446, #fe7446 25%, #f74162 75%, #f74162)">
-                    <button @click="effort3active = false" class="text-xl self-end">X</button>
-                    <h3 class="text-2xl font-bold mb-2">Future Founders Initiative</h3>
-                    <p class="font-light">The Future Founders Initiative is a non-profit organization whichs mission is
-                        to inspire and educate young people to become entrepreneurs. I was part of the founding process
-                        in 2024 and since them I am responsible for the technical side of things. For example I built
-                        the website and the backend for the FFI platform.</p>
-                    <div class="self-end mt-auto font-medium" style="color: var(--es-highlight-color)">Entrepreneurship
-                    </div>
-                </div>
             </div>
         </MySection>
+        <!-- dark background for expanded efforts -->
+        <div v-show="effort1active || effort2active || effort3active"
+            class="fixed top-0 left-0 w-screen h-screen z-10 translate-y-0 translate-x-0"
+            style="background-color: rgba(0,0,0,0.5)">
+        </div>
+        <!-- expanded efforts -->
+        <div v-show="effort1active"
+            class="expanded_effort text-white flex flex-col p-6 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+            style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/tum_logo.png'), linear-gradient(#3070b3, #3070b3)">
+            <button @click="effort1active = false" class="text-xl self-end">X</button>
+            <h3 class="text-2xl font-bold mb-2">Technical University of Munich</h3>
+            <p class="font-light">I am currenty pursuing a degree in Computer Science at the prestigious
+                Technical University of Munich (TUM). So far I am very happy with my choice. The TUM has a
+                strong focus on technology and entrepreneurship, which exactly represents my current interests.
+                I plan on graduating in 2027.</p>
+            <div class="self-end mt-auto font-medium" style="color: var(--cs-highlight-color)">Computer
+                Science
+            </div>
+        </div>
+        <div v-show="effort2active"
+            class="expanded_effort text-white flex flex-col p-6 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+            style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/visions_logo.png'), linear-gradient(#000000, #000000)">
+            <button @click="effort2active = false" class="text-xl self-end">X</button>
+            <h3 class="text-2xl font-bold mb-2">Visions Development</h3>
+            <p class="font-light">Visions Development is a web agency I founded with a good friend of mine. It
+                kinda happened naturally. Some people in my circle asked me, if I could build a website for them
+                and after 1-2 projects I told a friend about it and since my expertise is more on the technical
+                side and his more on the design side, we decided to team up and founded Visions Development. We
+                are eager to grow and learn, while working hard to build great experiences.</p>
+            <div class="self-end mt-auto font-medium"><span style="color: var(--cs-highlight-color)">Computer
+                    Science</span> &nbsp;&&nbsp; <span style="color: var(--es-highlight-color)">Entrepreneurship</span>
+            </div>
+        </div>
+        <div v-show="effort3active"
+            class="expanded_effort text-white flex flex-col p-6 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+            style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/ffi_logo.jpg'), linear-gradient(90deg, #fe7446, #fe7446 25%, #f74162 75%, #f74162)">
+            <button @click="effort3active = false" class="text-xl self-end">X</button>
+            <h3 class="text-2xl font-bold mb-2">Future Founders Initiative</h3>
+            <p class="font-light">The Future Founders Initiative is a non-profit organization whichs mission is
+                to inspire and educate young people to become entrepreneurs. I was part of the founding process
+                in 2024 and since them I am responsible for the technical side of things. For example I built
+                the website and the backend for the FFI platform.</p>
+            <div class="self-end mt-auto font-medium" style="color: var(--es-highlight-color)">Entrepreneurship
+            </div>
+        </div>
     </main>
 </template>
 
