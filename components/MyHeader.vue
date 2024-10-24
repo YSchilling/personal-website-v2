@@ -16,7 +16,8 @@ const isDarkMode = useState("isDarkMode", () => false);
             <nav class="hidden md:flex">
                 <NuxtLink to="/about" class="mr-4 text-xl duration-300 hover:font-extrabold">About</NuxtLink>
                 <NuxtLink to="/projects" class="mr-4 text-xl duration-300 hover:font-extrabold">Projects</NuxtLink>
-                <NuxtLink to="/contact" class="text-xl duration-300 hover:font-extrabold">Contact</NuxtLink>
+                <NuxtLink to="/contact" class="mr-4 text-xl duration-300 hover:font-extrabold">Contact</NuxtLink>
+                <NuxtLink to="/blog" class="text-xl duration-300 hover:font-extrabold">Blog</NuxtLink>
             </nav>
             <div class="text-2xl mx-4 hidden md:block">|</div>
             <!-- TODO implement DE EN switch 
