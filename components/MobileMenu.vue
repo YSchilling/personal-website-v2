@@ -35,8 +35,11 @@ const isDarkMode = useState("isDarkMode", () => false);
             <li @click="menuActive = false" class="text-2xl mb-6">
                 <NuxtLink to="/projects">Projects</NuxtLink>
             </li>
-            <li @click="menuActive = false" class="text-2xl">
+            <li @click="menuActive = false" class="text-2xl mb-6">
                 <NuxtLink to="/contact">Contact</NuxtLink>
+            </li>
+            <li @click="menuActive = false" class="text-2xl">
+                <NuxtLink to="/blog">Blog</NuxtLink>
             </li>
         </ul>
     </div>
