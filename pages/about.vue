@@ -1,3 +1,7 @@
+<script setup lang="ts">
+useHead({ title: null })
+</script>
+
 <template>
   <main class="mb-64">
     <MySection class="pt-32 flex flex-col items-center">

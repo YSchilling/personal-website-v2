@@ -2,6 +2,8 @@
 
 const isDarkMode = useState("isDarkMode", () => false);
 
+useHead({ title: null })
+
 </script>
 
 <template>

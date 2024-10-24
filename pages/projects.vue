@@ -5,6 +5,8 @@ const isDarkMode = useState("isDarkMode", () => false);
 const { data } = await useAsyncData('projects', () => queryContent('/projects').findOne())
 const { currentEfforts, pastProjects } = data.value!;
 
+useHead({ title: null })
+
 </script>
 
 <template>

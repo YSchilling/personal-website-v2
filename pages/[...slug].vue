@@ -1,3 +1,7 @@
+<script setup lang="ts">
+useHead({ title: null })
+</script>
+
 <template>
     <main class="w-full h-screen flex flex-col justify-center items-center">
         <h1 class="text-6xl">404</h1>

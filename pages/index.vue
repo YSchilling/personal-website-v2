@@ -43,6 +43,7 @@ onMounted(() => {
             duration: 1,
             delay: 0.5,
             opacity: 1,
+            y: 0,
         });
         gsap.to("#skills-div", {
             scrollTrigger: {
@@ -51,6 +52,7 @@ onMounted(() => {
             duration: 1,
             delay: 0.5,
             opacity: 1,
+            y: 0,
         });
         gsap.to("#efforts-section", {
             scrollTrigger: {
@@ -59,6 +61,7 @@ onMounted(() => {
             duration: 1,
             delay: 0.5,
             opacity: 1,
+            y: 0,
         })
     });
 });
@@ -66,6 +69,8 @@ onMounted(() => {
 onUnmounted(() => {
     gsapContext.revert();
 });
+
+useHead({ title: null })
 
 </script>
 
@@ -81,7 +86,7 @@ onUnmounted(() => {
         </MySection>
         <MySection id="about-section" class="mb-64">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-64 lg:gap-16">
-                <div id="intro-div" class="opacity-0">
+                <div id="intro-div" class="opacity-0 translate-y-8">
                     <h2 class="text-2xl font-extrabold mb-4">Short Introduction</h2>
                     <p>With a lifelong passion for technology, I have immersed myself in the world of computers and
                         programming. What began as a hobby five years ago has become a professional journey, where I’ve
@@ -95,7 +100,7 @@ onUnmounted(() => {
                         horizons both personally and professionally.
                     </p>
                 </div>
-                <div id="skills-div" class="opacity-0">
+                <div id="skills-div" class="opacity-0 translate-y-8">
                     <h2 class="text-2xl font-extrabold mb-4">Skillset Overview</h2>
                     <ul class="flex flex-wrap">
                         <li v-for="(skill, index) in skills" :key="index" class="mr-4 mb-4">
@@ -105,7 +110,7 @@ onUnmounted(() => {
                 </div>
             </div>
         </MySection>
-        <MySection id="efforts-section" class="mb-64 opacity-0">
+        <MySection id="efforts-section" class="mb-64 opacity-0 translate-y-8">
             <div class="flex flex-col items-center">
                 <h2 class="text-2xl font-extrabold mb-4">My current Efforts</h2>
                 <MyDivider width="128px" class="mb-4" />

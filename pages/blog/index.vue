@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const { data: posts } = await useAsyncData("posts", () => queryContent("/blog").find())
+
+useHead({ title: null })
+
 </script>
 
 <template>

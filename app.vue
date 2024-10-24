@@ -8,6 +8,13 @@ watch(() => isDarkMode, () => {
   document.querySelector("body").style.backgroundColor = isDarkMode ? "#121212" : "#f9f9f9";
 });
 
+useHead({
+  title: null,
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} - Yorick Schilling` : "Yorick Schilling";
+  }
+})
+
 </script>
 
 <template>
