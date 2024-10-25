@@ -10,6 +10,8 @@
     { "title": "Wordpress", "iconURL": "/vector/wordpress_icon.svg", "skillType": "CS" },
     { "title": "Python", "iconURL": "/vector/python_icon.svg", "skillType": "CS" },
     { "title": "Go", "iconURL": "/vector/go_icon.svg", "skillType": "CS" },
+    { "title": "SQLite", "iconURL": "/vector/sqlite_icon.svg", "skillType": "CS" },
+    { "title": "PostgreSQL", "iconURL": "/vector/postgresql_icon.svg", "skillType": "CS" },
     { "title": "Git", "iconURL": "/vector/git_icon.svg", "skillType": "CS" },
     { "title": "Docker", "iconURL": "/vector/docker_icon.svg", "skillType": "CS" },
     { "title": "Linux", "iconURL": "/vector/linux_icon.svg", "skillType": "CS" },
