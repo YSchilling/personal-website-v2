@@ -15,6 +15,9 @@
     { "title": "Git", "iconURL": "/vector/git_icon.svg", "skillType": "CS" },
     { "title": "Docker", "iconURL": "/vector/docker_icon.svg", "skillType": "CS" },
     { "title": "Linux", "iconURL": "/vector/linux_icon.svg", "skillType": "CS" },
+    { "title": "Jira", "iconURL": "/vector/jira_icon.svg", "skillType": "ES" },
+    { "title": "Confluence", "iconURL": "/vector/confluence_icon.svg", "skillType": "ES" },
+    { "title": "Project Management", "skillType": "ES" },
     { "title": "Design Thinking", "skillType": "ES" },
     { "title": "Investing", "skillType": "ES" }
   ]
